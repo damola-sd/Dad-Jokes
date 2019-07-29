@@ -1,0 +1,29 @@
+{
+  "name": "dad-jokes",
+  "version": "1.0.0",
+  "description": "App that stores Dad Jokes",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damola-sd/Dad-Jokes.git"
+  },
+  "keywords": [
+    "Auth",
+    "CRUD",
+    "Jokes"
+  ],
+  "author": "Damola Adewunmi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/damola-sd/Dad-Jokes/issues"
+  },
+  "homepage": "https://github.com/damola-sd/Dad-Jokes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.1",
+    "sqlite": "^3.0.3"
+  }
+}
