@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+
 
 const User = require('../Models/User/user-model');
 const Jokes = require('../Models/Jokes/jokes-model');
 
-const secret = require('../auth/secret');
+
 const generateToken = require('../auth/generateToken');
 const restricted = require('../auth/restricted');
 
