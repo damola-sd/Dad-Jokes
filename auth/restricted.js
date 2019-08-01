@@ -7,15 +7,14 @@ module.exports = (req, res, next) => {
     if (token) {
         jwt.verify(token, secret, (err, decodedToken) => {
             if (err) {
-                res.status(401).json({message: 'Access denied. You do not have access to this endpoint. Login first' });
+                res.status(401).json({message: 'Access denied. Wrong Credentials' });
             } else {
                 req.decodedToken = decodedToken;
                 console.log('decoded token', req.decodedToken);
-                
                 next();
             }
         });
     } else {
-        res.status(401).json({ you: 'SHALL NOT PASS!' });
+        res.status(401).json({ message: 'Access denied. You do not have access to this endpoint. Login first' });
     }
 };
