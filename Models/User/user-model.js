@@ -5,6 +5,7 @@ module.exports = {
     createUser,
     update,
     findById,
+    findBy,
     remove
 }
 async function createUser(user) {
@@ -19,6 +20,11 @@ async function update(id, changes) {
 
 function findById(id) {
     return db('users').where({ id });
+}
+
+
+function findBy(filter) {
+  return db('users').where(filter);
 }
 
 function remove(id) {

@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
     if (token) {
         jwt.verify(token, secret, (err, decodedToken) => {
             if (err) {
-                res.status(401).json({ you: 'can\'t touch this' });
+                res.status(401).json({message: 'Access denied. You do not have access to this endpoint. Login first' });
             } else {
                 req.decodedToken = decodedToken;
                 console.log('decoded token', req.decodedToken);

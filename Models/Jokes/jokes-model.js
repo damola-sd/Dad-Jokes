@@ -4,12 +4,14 @@ module.exports = {
     insert,
     update,
     findByUserId,
+    findById,
     getPublicJokes,
     remove
 }
 
-async function insert(id, joke) {
-    const [id] = await db('jokes').insert(...joke, {user_id: id});
+async function insert(userId, body) {
+    let { joke, status } = body;
+    const [id] = await db('jokes').insert({ joke: joke, status: status, user_id: userId});
 
   return db('jokes').where({ id }).first();
 }
@@ -20,6 +22,10 @@ async function update(id, changes) {
 
 function findByUserId(id) {
     return db('jokes').where({ user_id: id });
+}
+
+function findById(id) {
+    return db('jokes').where({ id });
 }
 
 function getPublicJokes() {
