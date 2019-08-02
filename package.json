@@ -1,0 +1,47 @@
+{
+  "name": "dad-jokes",
+  "version": "1.0.0",
+  "description": "App that stores Dad Jokes",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env DB_ENV=testing jest --watch",
+    "server": "nodemon index.js",
+    "migrate": "NODE_ENV=production npx knex migrate:latest",
+    "down": "NODE_ENV=production npx knex migrate:down",
+    "restart": "NODE_ENV=production heroku restart && heroku pg:reset DATABASE --confirm dad-jokes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damola-sd/Dad-Jokes.git"
+  },
+  "jest": {
+    "testEnvirnoment": "node"
+  },
+  "keywords": [
+    "Auth",
+    "CRUD",
+    "Jokes"
+  ],
+  "author": "Damola Adewunmi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/damola-sd/Dad-Jokes/issues"
+  },
+  "homepage": "https://github.com/damola-sd/Dad-Jokes#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.20.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.1",
+    "pg": "^7.12.0",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
