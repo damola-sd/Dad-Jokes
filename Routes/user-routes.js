@@ -78,6 +78,17 @@ router.delete('/:id/jokes/jid', restricted, async (req, res) => {
         })
     }
 })
+
+router.put('/:id/jokes/jid', restricted, async (req, res) => {
+    try {
+        const jokes = await Jokes.update(req.params.jid, req.body);
+        res.status(201).json(jokes);
+    }catch(error) {
+        res.status(500).json({
+            error: error.toString()
+        })
+    }
+})
 module.exports = router;
 
 
