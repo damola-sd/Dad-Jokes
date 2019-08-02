@@ -1,5 +1,5 @@
 {
-  "name": "dad-jokes",
+  "name": "dadjokes",
   "version": "1.0.0",
   "description": "App that stores Dad Jokes",
   "main": "index.js",
