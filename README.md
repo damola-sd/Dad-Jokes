@@ -15,5 +15,5 @@ You're a funny guy, but you keep losing your list of jokes and forgetting which 
 | `get`    | /api/user/:id/jokes                     | fetch jokes owned by user. `Authorized token` required                                                    |
 | `post`    | /api/user/:id/jokes              | insert a new joke for the user. `Authorized token` required                                                          |
 | `put`    | /api/user/:id/jokes/:jid          | update existing joke. , `joke` required                       |
-| `delete` | /api/user/:id/jokes/:jid          | delete joke owned by user `id` with id `jid`                                                                         |
-                                        |
+| `delete` | /api/user/:id/jokes/:jid          | delete joke owned by user `id` with id `jid`                                                                         
+                                     
