@@ -16,7 +16,7 @@ router.get('/', async(req, res) => {
 
 router.get('/:id', async(req, res) => {
     try {
-        const joke = await Jokes.findById(req.params.id);
+        const joke = await Jokes.getPublicJokesById(req.params.id);
         res.status(201).json(joke);
     }catch(error) {
         res.status(500).json({

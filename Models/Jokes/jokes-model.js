@@ -6,6 +6,7 @@ module.exports = {
     findByUserId,
     findById,
     getPublicJokes,
+    getPublicJokesById,
     remove
 }
 
@@ -30,6 +31,10 @@ function findById(id) {
 
 function getPublicJokes() {
     return db('jokes').where({ status: 'public' })
+}
+
+function getPublicJokesById(id) {
+    return db('jokes').where({ status: 'public' , id})
 }
 
 function remove(id) {
