@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cross-env DB_ENV=testing jest --watch",
-    "server": "nodemon index.js",
-    "migrate": "NODE_ENV=production npx knex migrate:latest",
-    "down": "NODE_ENV=production npx knex migrate:down",
-    "restart": "NODE_ENV=production heroku restart && heroku pg:reset DATABASE --confirm dad-jokes"
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
